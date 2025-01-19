@@ -15,6 +15,7 @@
 					<th>Nama</th>
 					<th>Alamat</th>
 					<th>Tanggal</th>
+                    <th>Pukul</th>
 					<th>Aksi</th>
 				</tr>
 			</thead>
@@ -25,6 +26,7 @@
 						<td>{{ $event->name }}</td>
 						<td>{{ $event->location }}</td>
 						<td>{{ $event->date_formatted }}</td>
+						<td>{{ \Carbon\Carbon::parse($event->start_time)->format('H:i') }} WIB - {{ \Carbon\Carbon::parse($event->finish_time)->format('H:i') }} WIB</td>
 						<td>
 							<a href="{{ route('admin.event.edit', $event->id) }}" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
 							<button class="btn btn-sm btn-danger" onclick="remove({{ $event->id }})"><i class="fa fa-trash"></i></button>

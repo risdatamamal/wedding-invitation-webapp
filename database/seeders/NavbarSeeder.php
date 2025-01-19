@@ -21,7 +21,7 @@ class NavbarSeeder extends Seeder
     		'event' => 'Acara',
     		'gallery' => 'Galeri',
     		'location' => 'Lokasi',
-            'gift' => 'Hadiah',
+            'gift' => 'Kado Digital',
     		'rsvp' => 'RSVP'
     	]);
     }

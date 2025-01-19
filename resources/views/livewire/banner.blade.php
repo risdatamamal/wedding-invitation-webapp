@@ -21,11 +21,11 @@
 
 						@error('banner.text')
 							<span class="invalid-feedback">{{ $message }}</span>
-						@enderror			
+						@enderror
 					</div>
 				</div>
 				<div class="form-group row">
-					<label class="col-sm-4 col-form-label">Foto</label>
+					<label class="col-sm-4 col-form-label">Background Desktop</label>
 					<div class="col-sm-8">
 						<div class="custom-file">
 							<label class="custom-file-label">{{ $banner->image }}</label>

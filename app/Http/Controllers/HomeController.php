@@ -12,12 +12,13 @@ use App\Repositories\StoryRepository as Story;
 use App\Repositories\EventRepository as Event;
 use App\Repositories\GalleryRepository as Gallery;
 use App\Repositories\GiftRepository as Gift;
+use App\Repositories\RSVPRepository as RSVP;
 
 use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-	public function index(About $aboutRepo, Navbar $navbarRepo, Banner $bannerRepo, Quote $quoteRepo, Wedding $weddingRepo, Countdown $countdownRepo, Story $storyRepo, Event $eventRepo, Gallery $galleryRepo, Gift $giftRepo): View
+	public function index(About $aboutRepo, Navbar $navbarRepo, Banner $bannerRepo, Quote $quoteRepo, Wedding $weddingRepo, Countdown $countdownRepo, Story $storyRepo, Event $eventRepo, Gallery $galleryRepo, Gift $giftRepo, RSVP $rsvpRepo): View
 	{
 		$about = $aboutRepo->getFirst();
 		$navbar = $navbarRepo->getFirst();
@@ -29,7 +30,8 @@ class HomeController extends Controller
 		$events = $eventRepo->get();
 		$galleries = $galleryRepo->get();
         $gifts = $giftRepo->get();
+        $rsvps = $rsvpRepo->get();
 
-		return view('home', compact('about', 'navbar', 'banner', 'quote', 'wedding', 'countdown', 'stories', 'events', 'galleries', 'gifts'));
+		return view('home', compact('about', 'navbar', 'banner', 'quote', 'wedding', 'countdown', 'stories', 'events', 'galleries', 'gifts', 'rsvps'));
 	}
 }

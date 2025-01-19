@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wedding Invitation (Tamam n Novia)</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
@@ -17,21 +17,25 @@
 
     @include('_includes.header')
 
-    @include('_partials.about')
-
     @include('_partials.countdown')
 
-    @include('_partials.story')
+    @include('_partials.surah')
+
+    {{-- @include('_partials.story') --}}
+
+    @include('_partials.about')
 
     @include('_partials.alert')
 
     @include('_partials.event')
 
-    @include('_partials.gallery')
-
     @include('_partials.location')
 
     @include('_partials.gift')
+
+    @include('_partials.gallery')
+
+    @include('_partials.list-rsvp')
 
     @include('_partials.footer')
 
@@ -42,6 +46,7 @@
     <div class="bg-dark text-light up d-flex align-items-center justify-content-center rounded-circle position-fixed">
         <i class="fa fa-arrow-up"></i>
     </div>
+
     <script src="bootstrap/bootstrap.min.js"></script>
     <script>
         const weddingDate = '{{ $wedding->date }}'

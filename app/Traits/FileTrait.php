@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Traits;
 
@@ -7,7 +7,8 @@ trait FileTrait {
 	public function upload(object $file): String
 	{
 		$fileName = $this->getFileName($file);
-		$file->storeAs('img/', $fileName);
+		$file->storeAs('img', $fileName, 'public');
+
 		return $fileName;
 	}
 

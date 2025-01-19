@@ -9,7 +9,7 @@ class Event extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'location', 'date', 'photo'];
+    protected $fillable = ['name', 'location', 'date', 'start_time', 'end_time', 'photo'];
 
     public function getPhotoSrcAttribute(): String
     {

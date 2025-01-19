@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-6">
-		<img src="{{ $location->imageSrc }}" class="img-fluid rounded shadow">
+		<img src="{{ $wedding->imageSrc }}" class="img-fluid rounded shadow">
 	</div>
 	<form class="col-md-6 mx-auto" wire:submit.prevent="save">
 		@if (session()->has('success'))
@@ -18,7 +18,7 @@
 					<label class="col-sm-4 col-form-label">Foto</label>
 					<div class="col-sm-8">
 						<div class="custom-file">
-							<label class="custom-file-label">{{ $location->image }}</label>
+							<label class="custom-file-label">{{ $wedding->image }}</label>
 							<input type="file" class="custom-file-input @error('image') is-invalid @enderror" wire:model="image">
 
 							@error('image')

@@ -15,13 +15,23 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-    	Event::create(
+    	Event::insert([
             [
-                'name' => 'Akad & Resepsi',
+                'name' => 'Akad',
                 'location' => 'Kampung Makan Joglo',
                 'date' => '2025-01-26',
-                'photo' => 'event.jpg'
+                'start_time' => '10:00:00',
+                'end_time' => '11:00:00',
+                'photo' => 'akad.jpg'
+            ],
+            [
+                'name' => 'Resepsi',
+                'location' => 'Kampung Makan Joglo',
+                'date' => '2025-01-26',
+                'start_time' => '11:00:00',
+                'end_time' => '13:30:00',
+                'photo' => 'resepsi.jpg'
             ]
-    );
+        ]);
     }
 }

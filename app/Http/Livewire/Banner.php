@@ -17,7 +17,7 @@ class Banner extends Component
 
 	protected $rules = [
 		'banner.text' => 'required|string|max:20',
-		'image' => 'image|nullable'
+		'image'       => 'image|nullable'
 	];
 
 	public function save()

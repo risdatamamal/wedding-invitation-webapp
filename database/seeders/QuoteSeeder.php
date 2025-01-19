@@ -17,7 +17,7 @@ class QuoteSeeder extends Seeder
     {
     	Quote::create([
     		'text' => 'Jangan Lupa Datang & Mohon Doa Restu',
-            'footer' => 'Dumogi sang awiwaha setata bagia nyantos riwekasan',
+            'footer' => 'Mugi tansah pinaringan kabagyan lan kasuksesan',
     		'image' => 'event2.jpg'
     	]);
     }

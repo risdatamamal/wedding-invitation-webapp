@@ -15,13 +15,19 @@ class GiftSeeder extends Seeder
      */
     public function run()
     {
-    	Gift::create(
+        Gift::insert([
             [
-                'name' => 'Admin',
-                'no_rekening' => '1234567890',
-                'note' => 'a/n: Admin',
-                'icon' => 'icon.jpg'
-            ]
-    );
+                'name' => 'BANK MANDIRI',
+                'no_rekening' => '1010013675572',
+                'note' => 'a/n: Novia Ryan Ramadhan',
+                'icon' => 'icon-mandiri.jpg',
+            ],
+            [
+                'name' => 'BANK BCA',
+                'no_rekening' => '4760282435',
+                'note' => 'a/n: Risda Tamam Aljava',
+                'icon' => 'icon-bca.jpg',
+            ],
+        ]);
     }
 }

@@ -12,10 +12,10 @@ class Location extends Component
 {
 	use WithFileUploads, FileTrait;
 
-	public $location, $image;
+	public $wedding, $image;
 
 	protected $rules = [
-		'wedding.image' => 'image|nullable'
+		'image' => 'image|nullable'
 	];
 
 	public function save()
@@ -25,17 +25,17 @@ class Location extends Component
 		if ($this->image) {
 			$image = $this->upload($this->image);
 
-			$this->location->image = $image;
+			$this->wedding->image = $image;
 		}
 
-		$this->location->save();
+		$this->wedding->save();
 
 		session()->flash('success', 'Sukses Menyimpan Lokasi');
 	}
 
-	public function mount(WeddingRepository $locationRepo)
+	public function mount(WeddingRepository $weddingRepo)
 	{
-		$this->location = $locationRepo->getFirst();
+		$this->wedding = $weddingRepo->getFirst();
 	}
     public function render()
     {

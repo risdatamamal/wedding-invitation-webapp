@@ -13,7 +13,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    
+
     @include('_partials.sidebar')
 
     <!-- End of Sidebar -->
@@ -25,7 +25,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        
+
         @include('_partials.navbar')
 
         <!-- End of Topbar -->
